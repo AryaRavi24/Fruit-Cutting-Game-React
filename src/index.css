@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body{
+  margin: 0;
+  padding: 0;
+  
+}
+.font{
+  font-family: "Agbalumo", system-ui;
+}
+
+.falling-object {
+  position: absolute;
+  top: -50px;
+  animation: fallDown 3s linear infinite;
+}
+
+@keyframes fallDown {
+  0% { top: -50px; opacity: 0; }
+  10% { opacity: 1; }
+  100% { top: 100%; opacity: 1; }
+}
+
