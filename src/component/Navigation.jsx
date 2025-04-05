@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {fruitDetails} from '../data';
-import heartImg from "../assets/images/heart.png";
+import heartImg from "/images/heart.png";
 import { Link } from 'react-router-dom';
 
 
@@ -9,7 +9,7 @@ function Navigation() {
   const [score, setScore] = useState(0);
   const [heartCount, setHeartCount] = useState(3);
   const [gameOver, setGameOver] = useState(false); 
-  const [missedCount, setMissedCount] = useState(3);
+  // const [missedCount, setMissedCount] = useState(3);
 
   const getRandomPosition = () => Math.floor(Math.random() * 80) + 10;
   const getRandomSpeed = () => (Math.random() * 3 + 3).toFixed(2);
@@ -78,7 +78,7 @@ function Navigation() {
     <>
       <div className="absolute top-2 w-full px-4 flex justify-between">
           {
-            gameOver ? "" : <div className="flex gap-3 items-center font-bold text-lg text-amber-600"><img src="../src/assets/images/score.png" alt="score" className="w-9" /><h1>{score}</h1></div>
+            gameOver ? "" : <div className="flex gap-3 items-center font-bold text-lg text-amber-600"><img src="/images/score.png" alt="score" className="w-9" /><h1>{score}</h1></div>
           }    
         
         <div className="flex">
